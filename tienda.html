@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Mercadillo!</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilos/estiloprincipal.css">
+    <link rel="stylesheet" href="estilos/estiloencabezado.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Roboto:wght@100&family=Teko:wght@500&display=swap" rel="stylesheet">
+
+
+<style>
+    
+    .producto {
+        margin: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        text-align: center;
+        width: 200px;
+    }
+    .producto h3 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .producto img {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+    .producto p {
+        font-size: 1rem;
+        margin: 0;
+        color: #666;
+    }
+    .producto button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .producto button:hover {
+        background-color: #fff;
+        color: #333;
+    }
+    form {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    form label {
+        font-size: 1.
+    }
+    .producto img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+</style>
+
+
+<script>
+    // Función para mostrar/ocultar descripciones
+    function mostrarDescripcion(boton) {
+      var descripcion = boton.previousElementSibling;
+      if (descripcion.style.display === 'none') {
+        descripcion.style.display = 'block';
+        boton.innerHTML = 'Ocultar Descripción';
+      } else {
+        descripcion.style.display = 'none';
+        boton.innerHTML = 'Mostrar Descripción';
+      }
+    }
+  
+    // Ejecutar este código después de que el DOM esté completamente cargado
+    document.addEventListener('DOMContentLoaded', function() {
+      // Obtener todos los elementos de descripción
+      var descripciones = document.querySelectorAll('.descripcion');
+  
+      // Agregar un evento "click" al elemento document
+      document.addEventListener('click', function(event) {
+        // Verificar si el elemento que se hizo clic es una descripción o un botón de mostrar descripción
+        if (!event.target.closest('.producto') && !event.target.matches('.boton-descripcion')) {
+          // Ocultar todas las descripciones
+          descripciones.forEach(function(descripcion) {
+            descripcion.style.display = 'none';
+            descripcion.nextElementSibling.innerHTML = 'Mostrar Descripción';
+          });
+        }
+      });
+    });
+  </script>
+ 
+ <script>  </script>
+</head>
+
+
+<!-- Cuerpo principal de la página -->
+<body>
+    <!-- Encabezado de la página (logo y menu de navegación) -->
+    <header> 
+        <div class="encabezado-logo">
+            <a href="index.html"><img id="imagenlogo" src="imagenes/logopagina.png" alt="logoprincipal"></a>
+        </div> 
+        
+        <nav class="encabezado-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="busqueda.html">Buscar</a></li>
+                <li><a href="contact.html">Contacto y FAQ</a></li>
+            </ul>
+
+
+        </nav>
+    </header>
+
+
+    <!-- Cuerpo principal de la página, aca encontramos todo el contenido -->
+    <main>
+        <div class="producto">
+            <h3>Celular C</h3>
+            <img src="imagenes/661641025b358aff6dbdbb72b086af67.jpg" alt="Celular C">
+            <p class="precio">PRECIO: $100.000</p>
+            <div class="descripcion" style="display: none;">
+              <p>El celular es un dispositivo electrónico portátil que se utiliza para hacer llamadas, enviar mensajes y conectarse a Internet. Es un dispositivo esencial en la vida cotidiana de las personas en la actualidad. El celular es cada vez más inteligente y sofisticado, con características como pantallas táctiles, cámaras de alta calidad, almacenamiento de datos y aplicaciones avanzadas. Además, hay una gran variedad de modelos y marcas disponibles, desde los más económicos hasta los más caros y de alta gama. En resumen, el celular se ha convertido en una herramienta indispensable en la comunicación y el entretenimiento de las personas.</p>
+            </div>
+            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
+            <button class="boton-agregar" data-producto="1">Agregar al carrito</button>
+          </div>
+          
+          <div class="producto">
+            <h3>Tostadora T</h3>
+            <img src="imagenes/bread-machine-g6905a52b0_1280.jpg" alt="Tostadora T">
+            <p class="precio">PRECIO: $50000</p>
+            <div class="descripcion" style="display: none;">
+              <p> La tostadora es un electrodoméstico de cocina diseñado para tostar pan u otros alimentos de forma rápida y eficiente. Está compuesta por dos ranuras para colocar el pan y una resistencia eléctrica que lo calienta para dorarlo en pocos minutos. La mayoría de las tostadoras cuentan con diferentes niveles de temperatura y tiempo para ajustarse a los gustos del usuario. Además, tienen una palanca para subir y bajar el pan y un botón para cancelar el proceso de tostado en cualquier momento. La tostadora es un elemento básico en muchas cocinas modernas y es muy fácil de usar y limpiar.</p>
+            </div>
+            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
+            <button class="boton-agregar" data-producto="1">Agregar al carrito</button>
+          </div>
+                
+    <footer> </footer>
+</body>
+</html>

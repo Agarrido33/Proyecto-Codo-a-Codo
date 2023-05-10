@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Mercadillo!</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilos/estiloprincipal.css">
+    <link rel="stylesheet" href="estilos/estiloencabezado.css">
+    <link rel="stylesheet" href="estilos/estiloformcontact.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Roboto:wght@100&family=Teko:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<!-- Cuerpo principal de la página -->
+<body>
+    <!-- Encabezado de la página (logo y menu de navegación) -->
+    <header> 
+        <div class="encabezado-logo">
+            <a href="index.html"><img id="imagenlogo" src="imagenes/logopagina.png" alt="logoprincipal"></a>
+        </div> 
+        
+        <nav class="encabezado-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="busqueda.html">Buscar</a></li>
+                <li><a href="contact.html">Contacto y FAQ</a></li>
+            </ul>
+
+        </nav>
+        
+    </header>
+    <!-- Cuerpo principal de la página, aca encontramos todo el contenido -->
+    <main>
+        
+            <section class="secciones">
+            
+                <h3>Contacto</h3>
+                <div class="introcontact">
+                    <p>
+                        "¡Bienvenido a nuestro formulario de contacto! Si tienes alguna pregunta, comentario o sugerencia sobre nuestros productos o servicios, no dudes en hacérnoslo saber a través de este medio. En <b>El Mercadillo!</b>, nos comprometemos a brindarte la mejor experiencia de compra en línea, y estamos dispuestos a escuchar tus inquietudes para mejorar cada día más. Completa el siguiente formulario y te responderemos a la brevedad posible. ¡Gracias por elegirnos!"
+
+                    En cuanto a las consultas más comunes que podrían recibir, algunas posibles preguntas frecuentes de los usuarios de una tienda virtual podrían ser:
+
+                    <h2>Preguntas Frecuentes</h2>
+
+                    <h4>¿Cómo hago para realizar una compra en la tienda?</h4>
+                    <p>Para realizar una compra en nuestra tienda virtual, simplemente debes agregar los productos que deseas al carrito de compras y seguir los pasos indicados para finalizar el proceso de pago.</p>
+
+                    <h4>¿Cuáles son los métodos de pago aceptados?</h4>
+                    <p>Aceptamos diversas formas de pago, entre ellas tarjetas de crédito, débito, transferencias bancarias, PayPal, entre otras. Puedes consultar los métodos de pago disponibles al momento de realizar tu compra.</p>
+
+                    <h4>¿Cuánto tiempo tarda el envío y cuál es el costo?</h4>
+                    <p>El tiempo de entrega y el costo de envío pueden variar dependiendo de la ubicación del destinatario y del método de envío seleccionado. En general, el tiempo de entrega oscila entre 3 y 7 días hábiles. El costo de envío se calcula automáticamente al momento de realizar la compra.</p>
+
+                    <h4>¿Cómo puedo hacer seguimiento de mi pedido?</h4>
+                    <p>Una vez que tu pedido haya sido despachado, te enviaremos un correo electrónico con la información de seguimiento y el enlace para hacer el seguimiento en línea. También puedes contactarnos a través del formulario de contacto para solicitar información sobre el estado de tu pedido.</p>
+
+                    <h4>¿Qué hago si recibí un producto dañado o incorrecto?</h4>
+                    <p>Si recibiste un producto dañado o incorrecto, por favor contáctanos a través del formulario de contacto dentro de los 7 días hábiles siguientes a la recepción del pedido para que podamos ayudarte a resolver el problema.</p>
+
+                    <h4>¿Cómo puedo cancelar o devolver un producto?</h4>
+                    <p>Si deseas cancelar o devolver un producto, por favor contáctanos a través del formulario de contacto dentro de los 7 días hábiles siguientes a la recepción del pedido para que podamos ayudarte a resolver el problema. Ten en cuenta que algunos productos pueden no ser elegibles para devolución o cancelación.</p>
+
+                    <h4>¿Puedo hacer cambios en mi pedido una vez que lo haya realizado?</h4>
+                    <p>Si deseas hacer cambios en tu pedido una vez que lo hayas realizado, por favor contáctanos a través del formulario de contacto lo antes posible para que podamos ayudarte a realizar los cambios.</p>
+
+                    <h4>¿Hay algún descuento o promoción vigente en la tienda?</h4>
+                    <p>Sí, en ocasiones ofrecemos descuentos y promociones especiales en nuestra tienda virtual. Puedes consultar las ofertas disponibles en nuestro sitio web o suscribirte a nuestro boletín de noticias para recibir información actualizada sobre nuestras promociones.</p>
+
+                    <h4>¿Tienen una política de garantía para los productos?</h4>
+                    <p>Sí, todos nuestros productos cuentan con una garantía de satisfacción del cliente. Si no estás satisfecho con tu compra, por favor contáctanos a través del formulario de contacto para que podamos ayudarte a resolver el problema.</p>
+
+                    <h4>¿Cómo puedo contactar al servicio al cliente?</h4>
+                    <p>Puedes contactarnos a través del formulario de contacto en nuestro sitio web, o escribiéndonos un correo electrónico a la dirección indicada en el sitio. También puedes seguirnos en nuestras redes sociales para estar al tanto de las últimas novedades y promociones.</p>
+
+                
+                </div>
+                <div class="contactoform">
+                <form action="mostrar_datos.html" method="POST" target="_blank"   enctype="multipart/form-data">
+                    
+                
+                    <br>
+                    <!-- Ingreso del nombre -->
+                    <label for="nombre">Nombre: </label>
+                    <input size="30" type="text" name="nombre" placeholder="Ingrese su nombre aqui...">
+                    <br>
+            
+                    <!-- Ingreso del apellido -->
+                    <label for="apellido">Apellido: </label>
+                    <input size="30" type="text" name="apellido" placeholder="Ingrese su apellido aqui...">
+                    <br>
+            
+                    <!-- Ingreso de la dirección -->
+                    <label for="direccion">Direccion: </label>
+                    <input size="30" type="text" name="direccion" placeholder="Ingrese su direccion aqui...">
+                    <br>
+            
+                    
+                    <!-- Ingreso de cometario -->
+                     <label for="comentario">Comentario:</label>
+                     <textarea name="comentario" id="comentario" cols="40" rows="3"></textarea>
+                    <br>
+                    
+                     <!-- Ingreso de un archivo-->            
+                     <label for="archivo">Archivo: </label>           
+                     <input type="file" name="archivo" class="archivo"  placeholder="Adjunte archivo...">            
+                    
+                    <br><br>
+                    <button type="reset" value="Borrar" style="cursor:pointer;"><span>Borrar</span></button>
+                    
+                    <button type="submit" value="Enviar datos" style="cursor:pointer;">Enviar Datos</button>
+                    
+                
+                </form>
+               </div>
+            </section>
+            <div class="secciones">
+                <h3>Contacto</h3>
+            <p>Enviame sugerencias: <a href="mailto:ejemplo@gmail.com"   >ejemplo@gmail.com</a></p>
+            
+            </div>
+        
+
+
+    </main>
+
+
+
+    <!-- Pie de página, copyright, etc -->
+    <footer>
+        <div>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="imagenes/faceicon.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="imagenes/twiticon.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="imagenes/instaicon.png" alt=""></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"><img src="imagenes/giticon.png" alt=""></a>
+        
+            <br><h3>© Copyright 2023, El Mercadillo!. Todos los derechos reservados.</h3>
+        </div>
+    </footer>
+</body>
+</html>

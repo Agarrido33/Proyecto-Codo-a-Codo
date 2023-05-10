@@ -1,0 +1,52 @@
+/*Logo y Menu */
+#imagenlogo {
+    width: 300px;
+}
+
+
+.encabezado-logo {
+    width: auto;
+    display:inline-block;
+    margin:0 0 0 3rem;
+
+
+}
+.encabezado-nav {
+    left:auto;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 0  0.5rem 5rem;
+}
+
+.encabezado-nav ul {
+    list-style: none;
+}
+
+.encabezado-nav li {
+    float: left;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 2rem 0 2rem;
+    
+}
+
+.encabezado-nav  a {
+    text-decoration: none;
+    color: rgb(241, 241, 241);
+    letter-spacing: 1px;
+}
+
+.encabezado-nav  a:hover{
+    text-shadow: 0 0 0.2em rgb(159, 111, 236), 0 0 0.2em #87F,
+		0 0 0.2em #87F;
+    color: rgb(134, 234, 241);
+    transition: 1s;
+    
+}
+
+
+.encabezado-nav li a {
+    font-size: 1.5rem;
+    background: transparent;   
+}

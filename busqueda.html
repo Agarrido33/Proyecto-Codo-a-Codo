@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Mercadillo!</title>
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilos/estiloprincipal.css">
+    <link rel="stylesheet" href="estilos/estiloencabezado.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Roboto:wght@100&family=Teko:wght@500&display=swap" rel="stylesheet">
+
+<style>
+    
+    .producto {
+        margin: 1rem;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        text-align: center;
+        width: 200px;
+    }
+    .producto h3 {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .producto img {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+    .producto p {
+        font-size: 1rem;
+        margin: 0;
+        color: #666;
+    }
+    .producto button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .producto button:hover {
+        background-color: #fff;
+        color: #333;
+    }
+    .carrito {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+    .carrito ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .carrito li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+    .carrito li button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 0.2rem 0.5rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .carrito li button:hover {
+        background-color: #fff;
+        color: #333;
+    }
+    .carrito h4 {
+        font-size: 1rem;
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+    .carrito p {
+        margin: 0;
+        color: #666;
+        font-size: 0.9rem;
+    }
+    form {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    form label {
+        font-size: 1.
+    }
+    form input[type=text], form input[type=email], form input[type=tel], form select, form textarea {
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+    form input[type=submit] {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    form input[type=submit]:hover {
+        background-color: #fff;
+        color: #333;
+    }
+</style>
+
+
+
+</head>
+
+<!-- Cuerpo principal de la página -->
+<body>
+    <!-- Encabezado de la página (logo y menu de navegación) -->
+    <header> 
+        <div class="encabezado-logo">
+            <a href="index.html"><img id="imagenlogo" src="imagenes/logopagina.png" alt="logoprincipal"></a>
+        </div> 
+        
+        <nav class="encabezado-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="busqueda.html">Buscar</a></li>
+                <li><a href="contact.html">Contacto y FAQ</a></li>
+            </ul>
+
+        </nav>
+        
+    </header>
+    <!-- Cuerpo principal de la página, aca encontramos todo el contenido -->
+    <main>
+        <div class="producto">
+			<h3>Celular C</h3>
+			<img src="imagenes/661641025b358aff6dbdbb72b086af67.jpg" alt="Producto 1">
+			<p>Precio: $50000</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="1" data-precio="50000">Agregar al carrito</button>
+		</div>
+
+		<div class="producto">
+			<h3>Tostadora T</h3>
+			<img src="imagenes/bread-machine-g6905a52b0_1280.jpg" alt="Producto 2">
+			<p>Precio: $30000</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="2" data-precio="30000">Agregar al carrito</button>
+		</div>
+
+		<div class="producto">
+			<h3>Tostadora de dos panes</h3>
+			<img src="imagenes/bread-machine-g6b8cab99f_1280.jpg" alt="Producto 3">
+			<p>Precio: $35000</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="3" data-precio="35000">Agregar al carrito</button>
+		</div>
+
+		<div class="producto">
+			<h3>Licuadora L</h3>
+			<img src="imagenes/device-ga3a11c703_1280.jpg" alt="Producto 4">
+			<p>Precio: $45000</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="4" data-precio="45000">Agregar al carrito</button>
+		</div>
+
+		<div class="producto">
+			<h3>Plancha P</h3>
+			<img src="imagenes/electric-iron-g86393133d_1280.jpg" alt="Producto 5">
+			<p>Precio: $20000</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="5" data-precio="20000">Agregar al carrito</button>
+		</div>
+
+		<div class="producto">
+			<h3>Notebook N</h3>
+			<img src="imagenes/X1502ZA-EJ294W.jpg" alt="Producto 6">
+			<p>Precio: $250000</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="6" data-precio="250000">Agregar al carrito</button>
+		</div>
+
+		<div class="producto">
+			<h3>Lavadora L</h3>
+			<img src="imagenes/washing-machine-gdc01eca6e_1280.jpg" alt="Producto 7">
+		
+			<p>Precio: $150000</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="7" data-precio="150000">Agregar al carrito</button>
+		</div>
+
+		<div class="producto">
+			<h3>Afeitadora A</h3>
+			<img src="imagenes/shaver-gfd88cb802_1280.jpg" alt="Producto 8">
+			<p>Precio: $10000</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="8" data-precio="10000">Agregar al carrito</button>
+		</div>
+
+		<div class="producto">
+			<h3>Producto 9</h3>
+			<img src="producto9.jpg" alt="Producto 9">
+			<p>Precio: $55</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="9" data-precio="55">Agregar al carrito</button>
+		</div>
+
+		<div class="producto">
+			<h3>Producto 10</h3>
+			<img src="producto10.jpg" alt="Producto 10">
+			<p>Precio: $75</p>
+			<p>Stock disponible: 100</p>
+			<button data-producto="10" data-precio="75">Agregar al carrito</button>
+		</div>
+	</main>
+
+	<aside>
+		<h2>Carrito de compras</h2>
+		<ul id="carrito"></ul>
+		<p>Total: <span id="total">0</span></p>
+		<form id="formulario" action="">
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="telefono">Teléfono:</label>
+			<input type="tel" id="telefono" name="telefono" required>
+
+			<label for="direccion">Dirección:</label>
+			<textarea id="direccion" name="direccion" required></textarea>
+
+			<label for="tarjeta">Número de tarjeta:</label>
+			<input type="text" id="tarjeta" name="tarjeta" required>
+
+			<label for="expiracion">Fecha de expiración:</label>
+			<input type="text" id="expiracion" name="expiracion" placeholder="MM/AA" required>
+
+			<label for="cvv">CVV:</label>
+			<input type="text" id="cvv" name="cvv" required>
+
+			<input type="submit" value="Comprar">
+		</form>
+	</aside>
+
+	<script src="tienda.js"></script>
+    <!-- Pie de página, copyright, etc -->
+    <footer>
+
+    </footer>
+</body>
+</html>
