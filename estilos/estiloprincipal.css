@@ -53,7 +53,8 @@ dentro de otra seccion*/
     border-radius: 50px 50px 5px 5px;
 }
 
-.vendido {
+
+.novedades {
     float: left;
     height: 100%;
     width: 30%;
@@ -66,9 +67,9 @@ dentro de otra seccion*/
 .contenidolateral {
     float: left;
     min-height: 50px;
-    width: 35%;
+    width: 30%;
     margin-top: 2.5%;
-    margin-left: 3%;
+    margin-left: 8%;
     margin-right: 10%;
     box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
     border-radius: 50px 50px 5px 5px;
@@ -76,13 +77,14 @@ dentro de otra seccion*/
 
 
 
-.secciones h3, .vendido h3, .contenidolateral h3 {
+.secciones h3, .novedades h3, .contenidolateral h3 {
     background: linear-gradient(rgb(116, 13, 148), rgb(160, 42, 175), rgb(255, 255, 255));
     border-radius: 50px 50px 0 0;
     font-size: 50px;
     width: auto;
     text-align: center;
     margin-top: 0;
+    margin-bottom: 0;
     padding: 0.5rem 1rem 0.5rem 1rem;
     color: rgb(255, 255, 255);
     text-shadow: 0 0 0.2em rgb(133, 212, 238), 0 0 0.2em rgb(119, 205, 255),
@@ -119,6 +121,7 @@ footer {
 footer div{
     display: inline-block;
     margin:auto;
+    margin-top: 3rem;
     padding-top: 0;
     text-align: center;
     width: 100%;

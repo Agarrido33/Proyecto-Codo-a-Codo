@@ -1,13 +1,9 @@
-.animate__animated.animate__pulse.animate__slower.animate__infinite {
-    text-align: center;
-    color: #732375;
-}
 
-/* estilo de slider de imagenes */
+/* estilo de slider de imagenes de Novedades */
 .slider-frame {
 	width: 100%;
     height: auto;
-	margin:50px auto 0 auto;
+	margin:0;
 	overflow: hidden;
     
 }
@@ -15,9 +11,9 @@
 .slider-frame ul {
 	display: flex;
 	padding: 0;
-	width: 400%;
+	width: 300%;
 	
-	animation: slide 20s infinite alternate ease-in-out;
+	animation: slide 15s infinite alternate ease-in-out;
 }
 
 .slider-frame li {
@@ -31,14 +27,61 @@
 
 @keyframes slide {
 	0% {margin-left: 0;}
-	20% {margin-left: 0;}
+	30% {margin-left: 0;}
 	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
+	35% {margin-left: -100%;}
+	65% {margin-left: -100%;}
 	
-	50% {margin-left: -200%;}
 	70% {margin-left: -200%;}
+	100% {margin-left: -200%;}
 	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
+}
+
+/* Carrousel imagenes con Javascript, Seccion popular */
+.carrousel{
+    width:100%;
+    max-width: 120em;
+    padding:0;
+    margin: 0;
+    overflow: hidden;
+}
+.carrousel .grande{
+    width: 400%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding:0;
+    transition: all .5s ease;
+    transform: translateX(0%);
+}
+.carrousel .img{
+    width: calc( 100% / 4);
+    min-height: 10vh;
+    
+}
+.carrousel .puntos{
+    width:100%;
+    margin:0.5em;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.carrousel .punto{
+	list-style: none;
+    width:  1em;
+    height: 1em;
+    margin: 1em 1em 0;
+    padding: 0;
+	background-color: rgb(227, 207, 233);
+	border-radius: 50%;
+}
+
+.carrousel .punto.activo{
+    background-color: rgb(116, 13, 148);
+	border-radius: 50%;
+	box-shadow: 0 0 0.2em rgb(133, 212, 238), 0 0 0.2em rgb(119, 205, 255),
+	0 0 0.2em rgb(116, 13, 148);
 }
