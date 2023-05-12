@@ -6,12 +6,14 @@
     flex-wrap: wrap;
     align-content: flex-start;
     
+    
 }
 
 .producto {
     margin: 1rem;
-    padding: 0;
+    padding-bottom: 1rem;
     border: 1px solid #ccc;
+    border-radius: 5px;
     text-align: center;
     width: 200px;
     max-height: 350px;
@@ -79,11 +81,15 @@ font-family: 'Courier New', Courier, monospace;
 
 }
 
-#total.encabezado-nav {
-       float: left;
-       }
+
 #total-carrito {
-      display: block;
+      float: inline-end;
       background-color: #fff;
       color: #333;
+      text-align: center;;
        }
+
+.precio {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
