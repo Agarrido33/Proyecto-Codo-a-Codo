@@ -81,7 +81,7 @@
                 
                 </div>
                 <div class="contactoform">
-                <form action="mostrar_datos.html" method="POST" target="_blank"   enctype="multipart/form-data">
+                <form name="fvalida"   action="mostrar_datos.html" method="POST" target="_blank"   enctype="multipart/form-data">
                     
                 
                     <br>
@@ -94,13 +94,17 @@
                     <label for="apellido">Apellido: </label>
                     <input size="30" type="text" name="apellido" placeholder="Ingrese su apellido aqui...">
                     <br>
+
+                     <!-- Ingreso codigo postal -->
+                     <label for="codigopostal">Codigo Postal: </label>
+                     <input size="30" type="text" name="CodigoPostal" placeholder="Ingrese su codigo postal aqui...">
+                     <br>
             
                     <!-- Ingreso de la dirección -->
                     <label for="direccion">Direccion: </label>
                     <input size="30" type="text" name="direccion" placeholder="Ingrese su direccion aqui...">
                     <br>
-            
-                    
+                                
                     <!-- Ingreso de cometario -->
                      <label for="comentario">Comentario:</label>
                      <textarea name="comentario" id="comentario" cols="40" rows="3"></textarea>
@@ -113,10 +117,50 @@
                     <br><br>
                     <button type="reset" value="Borrar" style="cursor:pointer;"><span>Borrar</span></button>
                     
-                    <button type="submit" value="Enviar datos" style="cursor:pointer;">Enviar Datos</button>
+                    <button type="submit" value="Enviar datos" onclick="valida_envia()" style="cursor:pointer;">Enviar Datos</button>
                     
                 
                 </form>
+                    <script>
+                            function valida_envia(){
+            	//valido el nombre
+            	if (document.fvalida.nombre.value.length==0){
+      	        	alert("Tiene que escribir su nombre")
+      		        document.fvalida.nombre.focus()
+      		        return 0;
+                	}
+                    //valido el apellido
+            	if (document.fvalida.apellido.value.length==0){
+      	        	alert("Tiene que escribir su apellido")
+      		        document.fvalida.apellido.focus()
+      		        return 0;
+                	}
+                    //valido su codigo postal
+                    if (document.fvalida.direccion.value.length==0){
+      	        	alert("Tiene que escribir su direccion")
+      		        document.fvalida.codigopostal.focus()
+      		        return 0;
+                	}
+                    //valido su direccion
+                    if (document.fvalida.direccion.value.length==0){
+      	        	alert("Tiene que escribir su direccion")
+      		        document.fvalida.direccion.focus()
+      		        return 0;
+                	}
+                    //el formulario se envia
+                	alert("Muchas gracias por enviar el formulario");
+                	document.fvalida.submit();
+                }
+
+
+
+
+                        
+                    </script>
+
+
+
+
                </div>
             </section>
             <div class="secciones">
