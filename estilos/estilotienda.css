@@ -90,13 +90,14 @@ font-family: 'Courier New', Courier, monospace;
 #total-carrito {
     float: inline-start;
       width: 200px;
-      background-color: #e1bee6;
-      border: 0.1rem rgb(110, 21, 110) solid;
+      min-height: 20px;
       border-radius: 5px;
-      color: #030303;
+      color: #f7f3f3;
       text-align: center;
       margin: 2rem;
+      margin-bottom: 0px;
       padding: 0.1rem;
+      padding-bottom: 0;
        }
 
 #iconcarrito {
@@ -107,4 +108,54 @@ font-family: 'Courier New', Courier, monospace;
 .precio {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
+}
+
+#fincompra {
+     
+     width: 7rem;
+     height: 2rem;
+     margin: 0.5rem;
+     background:#732375;
+     border-radius:5px;
+     font-family: 'Dongle', sans-serif;
+     font-size: 20px;
+     font-weight: bold;
+     color: rgb(236, 190, 240);
+}
+
+#fincompra:hover{
+    text-shadow: 0 0 0.2em rgb(159, 111, 236), 0 0 0.2em #87F,
+		0 0 0.2em #87F;
+    color: rgb(134, 234, 241);
+    transition: 1s;
+    
+}
+
+.ubicacion {
+    display: block;
+    width: 100%;
+    margin: 1rem;
+    margin-top: 2rem;
+    height: auto;
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+    border-radius: 50px 50px 5px 5px;
+}
+.ubicacion h3 {
+    background: linear-gradient(rgb(116, 13, 148), rgb(160, 42, 175), rgb(255, 255, 255));
+    border-radius: 50px 50px 0 0;
+    font-size: 25px;
+    width: auto;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 0.2em rgb(133, 212, 238), 0 0 0.2em rgb(119, 205, 255),
+		0 0 0.2em rgb(116, 13, 148);
+}
+
+.ubicacion iframe {
+    width: 450px;
+    margin: auto;
+    align-content: center;
 }
