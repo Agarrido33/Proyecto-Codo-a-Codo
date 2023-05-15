@@ -21,6 +21,7 @@
   }
 
 .producto h3 {
+    
     font-size: 1.2rem;
     margin: 0;
     text-align: center;
@@ -81,13 +82,27 @@ font-family: 'Courier New', Courier, monospace;
 
 }
 
+.compras {
+ width: 45%;
+ margin: auto;
+}
 
 #total-carrito {
-      float: inline-end;
-      background-color: #fff;
-      color: #333;
-      text-align: center;;
+    float: inline-start;
+      width: 200px;
+      background-color: #e1bee6;
+      border: 0.1rem rgb(110, 21, 110) solid;
+      border-radius: 5px;
+      color: #030303;
+      text-align: center;
+      margin: 2rem;
+      padding: 0.1rem;
        }
+
+#iconcarrito {
+    float: left;
+    color: rgb(110, 21, 110);
+}
 
 .precio {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
