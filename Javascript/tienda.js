@@ -18,12 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
   // Agregar un evento "click" al elemento document
   document.addEventListener('click', function(event) {
     // Verificar si el elemento que se hizo clic es una descripción o un botón de mostrar descripción
-    if (!event.target.closest('.producto') && !event.target.matches('.boton-descripcion')) {
+    if (!event.target.closest('#producto') && !event.target.matches('.boton-descripcion')) {
       // Ocultar todas las descripciones
       descripciones.forEach(function(descripcion) {
         descripcion.style.display = 'none';
         descripcion.nextElementSibling.innerHTML = 'Mostrar Descripción';
       });
+      
     }
+    
   });
+  
 });
+
+
