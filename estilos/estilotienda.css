@@ -75,10 +75,6 @@ form label {
     font-size: 1.
 }
 
-.producto img:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
-}
 
 .producto .descripcion {
 font-size: auto; /* Ajustar el tamaño según sea necesario */
@@ -177,6 +173,7 @@ font-family: 'Courier New', Courier, monospace;
     left: 1rem;
     width: 10rem;
     border: 2px #732375 solid;
+    background:linear-gradient( rgba(255, 255, 255, 0.849) 85%,rgb(202, 111, 214));
     margin: 1rem;
     border-radius: 5px;
 }
@@ -199,6 +196,7 @@ font-family: 'Courier New', Courier, monospace;
 
   
   #resultados {
+    
     margin-left: 220px; /* Ajusta el margen izquierdo para dejar espacio para el filtro */
     /* Agrega estilos para los resultados si es necesario */
   }
