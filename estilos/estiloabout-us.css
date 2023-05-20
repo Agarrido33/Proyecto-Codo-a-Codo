@@ -1,0 +1,59 @@
+main {
+    min-height: 200px;
+    overflow: auto;
+    background-color: white;
+    
+    
+
+}
+
+.mas-sobre {
+    min-height: 180px;
+    margin: auto;
+    margin-top: 2rem;
+    height: auto;
+    width: 70%;
+    box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
+    border-radius: 50px 50px 5px 5px;
+}
+
+.mas-sobre h3 {
+    background: linear-gradient(rgb(116, 13, 148), rgb(160, 42, 175), rgb(255, 255, 255));
+    border-radius: 50px 50px 0 0;
+    font-size: 50px;
+    width: auto;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 0.2em rgb(133, 212, 238), 0 0 0.2em rgb(119, 205, 255),
+		0 0 0.2em rgb(116, 13, 148);
+}
+
+.mas-sobre p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin: 2rem;
+    padding-bottom: 15px;
+}
+.mas-sobre #title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    margin: 2rem;
+    padding-bottom: 15px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.mas-sobre img {
+    display: block;
+    width: 40rem;
+    margin: auto;
+}
+.mas-sobre h2 {
+    text-align: end;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 1.5rem;
+}
