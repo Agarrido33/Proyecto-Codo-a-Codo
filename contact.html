@@ -81,23 +81,27 @@
                 
                 </div>
                 <div class="contactoform">
-                <form name="fvalida"   action="mostrar_datos.html" method="POST" target="_blank"   enctype="multipart/form-data">
-                    
-                
+                <form name="fvalida" action="https://formspree.io/f/xwkjjekp" id="formulario" method="POST" enctype="multipart/form-data">
+                                    
                     <br>
                     <!-- Ingreso del nombre -->
                     <label for="nombre">Nombre: </label>
-                    <input size="30" type="text" name="nombre" placeholder="Ingrese su nombre aqui...">
+                    <input size="30" type="text"id="nombre" name="nombre" placeholder="Ingrese su nombre aqui...">
                     <br>
             
                     <!-- Ingreso del apellido -->
                     <label for="apellido">Apellido: </label>
-                    <input size="30" type="text" name="apellido" placeholder="Ingrese su apellido aqui...">
+                    <input size="30" type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido aqui...">
                     <br>
+
+                      <!-- Ingreso su email -->
+                      <label for="email">e-mail: </label>
+                      <input size="30" type="text"id="email" name="e-mail" placeholder="Ingrese su email aqui...">
+                      <br>
 
                      <!-- Ingreso codigo postal -->
                      <label for="codigopostal">Codigo Postal: </label>
-                     <input size="30" type="text" name="CodigoPostal" placeholder="Ingrese su codigo postal aqui...">
+                     <input size="30" type="text" id="codigopostal" name="CodigoPostal" placeholder="Ingrese su codigo postal aqui...">
                      <br>
             
                     <!-- Ingreso de la dirección -->
@@ -121,9 +125,9 @@
                     
                 
                 </form>
-                    <script src="javascript/formcontact.js"></script>
+                    
 
-
+                <script src="Javascript/formcontact.js"></script>
 
 
                </div>
