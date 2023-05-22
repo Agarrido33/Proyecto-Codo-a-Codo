@@ -1,87 +1,170 @@
-
-/* estilo de slider de imagenes de Novedades */
+/* Estilos de la página principal */
+/* Estilo de slider de imágenes de Novedades */
 .slider-frame {
-	width: 100%;
+    width: 100%;
     height: auto;
-	margin:0;
-	overflow: hidden;
-    
-}
-
-.slider-frame ul {
-	display: flex;
-	padding: 0;
-	width: 300%;
-	
-	animation: slide 15s infinite alternate ease-in-out;
-}
-
-.slider-frame li {
-	width: 100%;
-	list-style: none;
-}
-
-.slider-frame img {
-	width: 100%;
-}
-
-@keyframes slide {
-	0% {margin-left: 0;}
-	30% {margin-left: 0;}
-	
-	35% {margin-left: -100%;}
-	65% {margin-left: -100%;}
-	
-	70% {margin-left: -200%;}
-	100% {margin-left: -200%;}
-	
-}
-
-/* Carrousel imagenes con Javascript, Seccion popular */
-.carrousel{
-    width:100%;
-    max-width: 120em;
-    padding:0;
     margin: 0;
     overflow: hidden;
-}
-.carrousel .grande{
+  }
+  
+  .slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: slide 15s infinite alternate ease-in-out;
+  }
+  
+  .slider-frame li {
+    width: 100%;
+    list-style: none;
+  }
+  
+  .slider-frame img {
+    width: 100%;
+  }
+  
+  @keyframes slide {
+    0% {margin-left: 0;}
+    30% {margin-left: 0;}
+    35% {margin-left: -100%;}
+    65% {margin-left: -100%;}
+    70% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+  }
+
+/* Carrousel de imágenes con Javascript, Sección popular */
+.carrousel {
+    width: 100%;
+    max-width: 120em;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .carrousel .grande {
     width: 400%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding:0;
+    padding: 0;
     transition: all .5s ease;
     transform: translateX(0%);
-}
-.carrousel .img{
-    width: calc( 100% / 4);
+  }
+  
+  .carrousel .img {
+    width: calc(100% / 4);
     min-height: 10vh;
-    
-}
-.carrousel .puntos{
-    width:100%;
-    margin:0.5em;
+  }
+  
+  .carrousel .puntos {
+    width: 100%;
+    margin: 0.5em;
     padding: 0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-}
-.carrousel .punto{
-	list-style: none;
+  }
+  
+  .carrousel .punto {
+    list-style: none;
     width:  1em;
     height: 1em;
     margin: 1em 1em 0;
     padding: 0;
-	background-color: rgb(227, 207, 233);
-	border-radius: 50%;
+    background-color: rgb(227, 207, 233);
+    border-radius: 50%;
+  }
+  
+  .carrousel .punto.activo {
+    background-color: rgb(116, 13, 148);
+    border-radius: 50%;
+    box-shadow: 0 0 0.2em rgb(133, 212, 238), 0 0 0.2em rgb(119, 205, 255),
+    0 0 0.2em rgb(116, 13, 148);
+  }
+/* Estilos de la sección de Novedades */
+.novedades {
+    margin-top: 2em;
 }
 
-.carrousel .punto.activo{
-    background-color: rgb(116, 13, 148);
-	border-radius: 50%;
-	box-shadow: 0 0 0.2em rgb(133, 212, 238), 0 0 0.2em rgb(119, 205, 255),
-	0 0 0.2em rgb(116, 13, 148);
+.novedades h3 {
+    text-align: center;
 }
+
+.novedades .slider-frame {
+    width: 100%;
+    height: auto;
+    margin: 2em 0;
+}
+
+.novedades .slider-frame img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+/* Estilos para dispositivos extra chicos hasta 600px */
+@media (max-width: 600px) {
+    body, header, main, footer {
+      margin: 0;
+      min-width: auto;
+    }
+  
+    .secciones {
+      width: 100%;
+      margin: 2rem 0;
+      border-radius: 0;
+    }
+  
+    .novedades, .contenidolateral {
+      float: none;
+      width: 90%;
+      margin: 2.5% auto;
+    }
+  
+    .secciones h3, .novedades h3, .contenidolateral h3 {
+      font-size: 30px;
+    }
+  
+    .secciones video {
+      width: 100%;
+      border-radius: 0;
+    }
+  
+    .secciones p {
+      margin: 1rem;
+    }
+  }
+  
+  /* Estilos para dispositivos chicos de 601px hasta 768px */
+  @media (min-width: 601px) and (max-width: 768px) {
+    .secciones {
+      width: 90%;
+      margin: 2rem auto;
+    }
+  }
+  
+  /* Estilos para dispositivos medianos de 769px hasta 1024px */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .secciones {
+      width: 80%;
+      margin: 2rem auto;
+    }
+  }
+  
+  /* Estilos para dispositivos grandes de 1025px hasta 1280px */
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .secciones {
+      width: 70%;
+      margin: 2rem auto;
+    }
+  }
+  
+  /* Estilos para dispositivos extra grandes a partir de 1281px */
+  @media (min-width: 1281px) {
+    .secciones {
+      width: 60%;
+      margin: 2rem auto;
+    }
+  }

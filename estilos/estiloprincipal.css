@@ -1,49 +1,41 @@
-
 html {
     font-size: 1rem;
     height: 100%;
-}
-
-body, header, main, footer {
+  }
+  
+  body, header, main, footer {
     min-height: 50px;
     margin: 0 0.5rem 0 0.5rem;
     min-width: 400px;
-}
-*::selection {
+  }
+  
+  *::selection {
     background-color: rgba(162, 48, 214, 0.637);
-}
-
-body {
+  }
+  
+  body {
     margin-top: auto;
     background-color: black;
     font-family: 'Dongle', sans-serif;
-}
-main {
+  }
+  
+  main {
     min-height: 200px;
     overflow: auto;
     background-color: white;
-    
-    
-
-}
-
-header {
+  }
+  
+  header {
     display: block;
     background: linear-gradient(rgb(60, 4, 77), rgb(160, 42, 175), rgba(255, 255, 255, 0.849));
-    
-    
-}
-header {position: sticky;top: 0;
-}
-
-
-
-/* Contenido principal del sitio. Le damos estilo al div que esta dentro del main.
+    position: sticky;
+    top: 0;
+  }
+  /* Contenido principal del sitio. Le damos estilo al div que esta dentro del main.
 Solo funciona si el div es hijo directo del main, no funciona si esta
 dentro de otra seccion*/
 
- 
-.secciones {
+  .secciones {
     min-height: 180px;
     margin: auto;
     margin-top: 2rem;
@@ -51,10 +43,9 @@ dentro de otra seccion*/
     width: 70%;
     box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
     border-radius: 50px 50px 5px 5px;
-}
-
-
-.novedades {
+  }
+  
+  .novedades {
     float: left;
     height: 100%;
     width: 30%;
@@ -62,9 +53,9 @@ dentro de otra seccion*/
     margin-left: 15%;
     box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
     border-radius: 50px 50px 5px 5px;
-}
-
-.contenidolateral {
+  }
+  
+  .contenidolateral {
     float: left;
     min-height: 50px;
     width: 30%;
@@ -73,11 +64,9 @@ dentro de otra seccion*/
     margin-right: 10%;
     box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
     border-radius: 50px 50px 5px 5px;
-}
-
-
-
-.secciones h3, .novedades h3, .contenidolateral h3 {
+  }
+  
+  .secciones h3, .novedades h3, .contenidolateral h3 {
     background: linear-gradient(rgb(116, 13, 148), rgb(160, 42, 175), rgb(255, 255, 255));
     border-radius: 50px 50px 0 0;
     font-size: 50px;
@@ -88,12 +77,10 @@ dentro de otra seccion*/
     padding: 0.5rem 1rem 0.5rem 1rem;
     color: rgb(255, 255, 255);
     text-shadow: 0 0 0.2em rgb(133, 212, 238), 0 0 0.2em rgb(119, 205, 255),
-		0 0 0.2em rgb(116, 13, 148);
-    
-
-}
-
-.secciones video {
+    0 0 0.2em rgb(116, 13, 148);
+  }
+  
+  .secciones video {
     display: block;
     width: 60%;
     margin: auto;
@@ -101,42 +88,43 @@ dentro de otra seccion*/
     border: #732375 5px solid;
     border-radius: 50px 0 50px 0;
     box-shadow: 0 0 1rem rgb(83 78 76 / 90%);
-}
-
-.secciones p {
+  }
+  
+  .secciones p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     margin: 2rem;
     padding-bottom: 15px;
-}
-
-
-
-
-
+  }
+  
 /* Estilos del Footer */
-footer {
+  footer {
     background-color: white;
-}
-footer div{
+  }
+  
+  footer div {
     display: inline-block;
-    margin:auto;
+    margin: auto;
     margin-top: 3rem;
     padding-top: 0;
     text-align: center;
     width: 100%;
-    background:rgb(160, 42, 175) ;
+    background:rgb(160, 42, 175);
     border-radius: 50% 50% 0 0;
     color: white;
     box-shadow: 0 0 0.9rem rgba(58, 55, 54, 0.575);
-        
-    
-   
-}
-footer div img {
+  }
+  
+  footer div img {
     width: 2rem;
     margin: 1rem;
-}
+  }
+  
 
 
-
+/* Estilos Full Responsive
+Dispositivos extra chicos hasta 600 px
+Dispositivos chicos 600px para arriba
+Dispositivos Medianos 768px para arriba
+Dispositivos Grandes 992px para arriba
+Dispositivos extra Grandes 1200px para arriba */
