@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="estilos/estiloprincipal.css">
     <link rel="stylesheet" href="estilos/estiloencabezado.css">
     <link rel="stylesheet" href="estilos/estiloindex.css">
+    <link rel="stylesheet" href="estilos/estiloclima.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
     <link rel="shortcut icon" href="imagenes/icononav.ico" type="image/x-icon">
     <!-- Javascript -->
     <script defer src="Javascript/carrousel.js"></script>
-    <script defer src="Javascript/api-restclima.js"></script>
+    
     
 </head>
 
@@ -53,6 +54,22 @@
     </header>
     <!-- Cuerpo principal de la página, aca encontramos todo el contenido principal-->
     <main>
+        <div id="contenedorclima">
+            <div id="caja1">
+                <span id="temperatura-valor"></span><span> - </span>
+                <span id="temperatura-descripcion"></span>
+            </div>
+            <div id="caja2">
+                <span id="ubicacion"></span>
+                <img id="icono-animado" src="" alt="" height="128" width="128">
+            </div>
+            <div id="caja3">
+                <span>Veloc. del Viento:</span>
+                <span id="viento-velocidad"></span>
+            </div>
+        </div>
+        <script src="Javascript/app.js"></script>
+
         <div class="contenidoprincipal">
             <section class="secciones">
                 <h3>¡Bienvenidos a El Mercadillo!</h3>
@@ -87,7 +104,6 @@
 
         </div>
         <aside class="contenidolateral">
-
             <div><h3>Lo mas Popular</h3></div>
                 <div class="carrousel">
                     <ul class="puntos">
