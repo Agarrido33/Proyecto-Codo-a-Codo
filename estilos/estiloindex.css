@@ -85,7 +85,7 @@
   }
 /* Estilos de la sección de Novedades */
 .novedades {
-    margin-top: 2em;
+    margin-top: 2.5em;
 }
 
 .novedades h3 {
@@ -119,24 +119,30 @@
     }
   
     .secciones {
-      width: 100%;
-      margin: 2rem 0;
+      width: 90%;
+      margin: 1rem;
       border-radius: 0;
+    }
+
+    .secciones p{
+    font-size: 12px;
     }
   
     .novedades, .contenidolateral {
       float: none;
       width: 90%;
-      margin: 2.5% auto;
+      margin: 1rem;
     }
   
     .secciones h3, .novedades h3, .contenidolateral h3 {
-      font-size: 30px;
+      font-size: 25px;
+      border-radius: 5px;
     }
   
     .secciones video {
-      width: 100%;
+      width: 90%;
       border-radius: 0;
+      border: none;
     }
   
     .secciones p {
@@ -205,6 +211,16 @@
       width: 90%;
       margin: 2rem auto;
     }
+    .novedades, .contenidolateral {
+      float: none;
+      width: 95%;
+      margin: 1rem;
+    }
+
+    .secciones video {
+      width: 90%;
+      border: none;
+    }
 
     #menu-check:not(:checked) ~ nav {
       display: none;}
@@ -272,6 +288,11 @@
     .secciones {
       width: 80%;
       margin: 2rem auto;
+    }
+    .novedades, .contenidolateral {
+      float: none;
+      width: 80%;
+      margin: 5rem;
     }
   }
   
