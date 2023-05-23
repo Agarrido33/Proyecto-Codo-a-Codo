@@ -16,11 +16,11 @@
 }
 
 #caja1 {
-    background-color: rgb(128, 16, 109);
+    background:linear-gradient( rgb(128, 16, 109),rgba(255, 255, 255, 0.849) ) ;
     color:azure;    
 }
 #caja2 {
-    background-color: darkslateblue;
+    background: linear-gradient(darkslateblue,rgba(255, 255, 255, 0.849) ) ;
     color:azure;    
 }
 
@@ -35,6 +35,6 @@
 }
 
 #caja3 {
-    background-color: #7d2aea;
+    background:linear-gradient(#7d2aea,rgba(255, 255, 255, 0.849) ) ; 
     color:azure;    
 }
