@@ -30,6 +30,7 @@ html {
     background: linear-gradient(rgb(60, 4, 77), rgb(160, 42, 175), rgba(255, 255, 255, 0.849));
     position: sticky;
     top: 0;
+    z-index: 1;
   }
   /* Contenido principal del sitio. Le damos estilo al div que esta dentro del main.
 Solo funciona si el div es hijo directo del main, no funciona si esta
