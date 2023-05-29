@@ -120,4 +120,150 @@ dentro de otra seccion*/
     width: 2rem;
     margin: 1rem;
   }
+
+  #menu, #menu-check {
+    display: none;
+  }
+
+
+/* Responsive para dispositivos de max 600px */
+
+  @media (max-width: 600px) {
+    #imagenlogo {
+   width: 200px;
+   }
+
+   body, header, main, footer {
+     margin: 0;
+     min-width: auto;
+   }
+ 
+
+
+   #menu-check:not(:checked) ~ nav {
+     display: none;}
+   
+   #menu-check:checked ~ nav {
+     display: block;
+   }
+
+   #menu {
+     display: block;
+     color: #fff;
+     font-size: 30px;
+     font-weight: bold;
+     position: absolute;
+     right: 1rem;
+     top: 1rem;
+     
+   }
+
+   #menu:hover{
+     text-shadow: 0 0 0.2em rgb(159, 111, 236), 0 0 0.2em #87F,
+     0 0 0.2em #87F;
+     color: rgb(134, 234, 241);
+     transition: 1s;
+   }
+
+   #menu-cerrar {
+     display: none;
+   }
+
+   #menu-check:checked ~ label #menu-abrir {
+     display:none;
+   }
+
+   #menu-check:checked ~ label #menu-cerrar {
+     display:block
+   }
+
+   header nav {
+     position: absolute;
+     margin: 1rem;
+     top: 0;
+     right: 0;
+     height: 100%;
+     background: linear-gradient(rgb(60, 4, 77), rgb(160, 42, 175), rgba(255, 255, 255, 0.849));
+
+     border: rgb(160, 42, 175) 3px solid;
+     border-radius: 10px;
+     padding-bottom: 10px;
+   }
+
+  .encabezado-nav ul, .encabezado-nav ul li{
+     display: grid;
+     text-align:left;
+   }
+
+
+ }
+ 
+ /* Estilos para dispositivos chicos de 601px hasta 768px */
+ @media (min-width: 601px) and (max-width: 768px) {
+   #imagenlogo {
+     width: 200px;
+   }
+
+   #menu-check:not(:checked) ~ nav {
+     display: none;}
+   
+   #menu-check:checked ~ nav {
+     display: block;
+   }
+
+   #menu {
+     display: block;
+     color: #fff;
+     font-size: 30px;
+     font-weight: bold;
+     position: absolute;
+     right: 1rem;
+     top: 1rem;
+     
+   }
+
+   #menu:hover{
+     text-shadow: 0 0 0.2em rgb(159, 111, 236), 0 0 0.2em #87F,
+     0 0 0.2em #87F;
+     color: rgb(134, 234, 241);
+     transition: 1s;
+   }
+
+   #menu-cerrar {
+     display: none;
+   }
+
+   #menu-check:checked ~ label #menu-abrir {
+     display:none;
+   }
+
+   #menu-check:checked ~ label #menu-cerrar {
+     display:block
+   }
+
+   header nav {
+     position: absolute;
+     margin: 1rem;
+     top: 0;
+     right: 0;
+     height: 100%;
+     background: linear-gradient(rgb(60, 4, 77), rgb(160, 42, 175), rgba(255, 255, 255, 0.849));
+     padding-top: 0;
+     padding-right: 0;
+     padding-bottom: 3rem;
+     border: rgb(160, 42, 175) 3px solid;
+     border-radius: 10px;
+   }
+
+  .encabezado-nav ul, .encabezado-nav ul li{
+     display: grid;
+     text-align:left;
+   }
+     
+   }
+ 
+ 
+
+ 
+
   

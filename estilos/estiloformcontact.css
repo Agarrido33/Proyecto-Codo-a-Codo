@@ -102,5 +102,116 @@
     transition: 1s;
     
 }
+.emailcontact p{
+    color: #732375;
+    font-weight: bold;
+    width: 50%;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1rem;
+    background: #eac7eb;
+    border: #732375 3px solid;
+    border-radius: 5px;
+    
+}
+
+/* Responsive dispositivos chicos max 768 px */
+@media (max-width: 768px){
+    .introcontact {
+        margin: 0.5rem;
+    }
+
+    .secciones h3, .novedades h3, .contenidolateral h3 {
+        font-size: 25px;
+        border-radius: 5px;
+      }
+
+    .introcontact,h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        margin-bottom: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+    .introcontact,h4 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        margin-bottom: 0;
+        padding-left: 0.5rem;
+        text-align: center;
+        max-width: 100%;
+    }
+    .introcontact p {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 10px;
+        margin-bottom: 0;
+        text-align: left;
+        padding: 0;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .contactoform #comentario {
+        max-width: 95%;
+     }
+    .contactoform form {
+    
+        margin: auto; /* Centramos el formulario */
+        width: 50%;   /* Sin ancho no podemos centrar el formulario */
+        
+        padding: auto; /* separamos los bordes del form del resto de elementos */
+        border: 0; /* Redondeamos los bordes del form */
+        
+        font-size: 20px;
+        font-weight: bold;
+     }
+    .contactoform {
+        word-wrap: break-word;
+        overflow: auto;
+        margin-bottom: 0.5rem;
+        background: linear-gradient( rgba(255, 255, 255, 0.849),rgb(160, 42, 175));; /* Color blanco para el formulario */
+        
+        
+    }
+
+    .contactoform input {
+        width: 30%;
+        min-width: 200px;
+        height: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 10px;
+     }
+
+     .contactoform button {
+        padding: 0;
+        width: 5rem;
+        height: 1.5rem;
+        margin: 0.2rem;
+        background:#732375;
+        border-radius:6px;
+        font-family: 'Dongle', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        color: rgb(236, 190, 240);
+    }
+    .emailcontact p{
+        padding: 0.5rem;
+        color: #732375;
+        font-size: 12px;
+        width: 50%;
+        height: 40px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 1rem;
+        background: #eac7eb;
+        border: #732375 3px solid;
+        border-radius: 5px;
+        
+    }
+    
+}
+
+
 
 
