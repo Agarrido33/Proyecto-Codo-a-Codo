@@ -200,3 +200,40 @@ font-family: 'Courier New', Courier, monospace;
     margin-left: 220px; /* Ajusta el margen izquierdo para dejar espacio para el filtro */
     /* Agrega estilos para los resultados si es necesario */
   }
+
+  @media (max-width: 768px){
+    .contenedorfiltro {
+        display:block;
+        min-width: 95%;
+        margin: 0;
+        
+    }
+    .contenedorfiltro br {
+        display: none;
+    }
+    .contenedorfiltro input {
+        display: none;
+    }
+    .contenedorfiltro label {
+       text-decoration: underline;
+       margin: 0.5rem;
+       padding: 0.2rem;
+       cursor: pointer;
+       
+    }
+    .contenedorfiltro label:hover {
+        text-decoration: underline;
+        text-shadow: 0 0 0.2em rgb(135, 84, 218), 0 0 0.2em rgb(99, 79, 233),
+        0 0 0.2em rgb(113, 96, 228);
+        color: rgb(183, 236, 240);
+        transition: 1s;
+        
+     }
+    #resultados {
+    
+        margin-top: 100px; /* Ajusta el margen izquierdo para dejar espacio para el filtro */
+        /* Agrega estilos para los resultados si es necesario */
+      }
+
+
+  }
