@@ -122,9 +122,13 @@
         margin: 0.5rem;
     }
 
-    .secciones h3, .novedades h3, .contenidolateral h3 {
+    .secciones {
+        width: 95%;
+    }
+    .secciones h3 {
         font-size: 25px;
         border-radius: 5px;
+        
       }
 
     .introcontact,h2 {
