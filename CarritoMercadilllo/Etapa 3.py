@@ -14,7 +14,7 @@ conn = get_db_connection()
 cursor = conn.cursor()
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS productos (
-        codigo VARCHAR(10) PRIMARY KEY,
+        codigo INTEGER PRIMARY KEY,
         descripcion TEXT NOT NULL,
         cantidad INTEGER NOT NULL,
         precio REAL NOT NULL

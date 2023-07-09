@@ -34,7 +34,7 @@ class Inventario:
     def crear_tabla_productos(self):
         self.cursor.execute("""
             CREATE TABLE IF NOT EXISTS productos (
-                codigo VARCHAR(10) PRIMARY KEY,
+                codigo INT PRIMARY KEY,
                 descripcion VARCHAR(100),
                 cantidad INT,
                 precio FLOAT
