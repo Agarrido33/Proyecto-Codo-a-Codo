@@ -77,366 +77,45 @@
         </div>
         
       <div id="resultados"></div>
+    
+    
+      <script>
+        // Obtener la referencia al contenedor de productos en la página tienda.html
+        var contenedorProductos = document.getElementById('resultados');
 
-         <!-- Lista Celulares -->
-        <div class="producto" data-nombre="Celular" data-categoria="celulares">
-            <h3>Celular C</h3>
-            <img src="imagenes/productos/661641025b358aff6dbdbb72b086af67.jpg" alt="Celular C">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-1">100000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p>El celular es un dispositivo electrónico portátil que se utiliza para hacer llamadas, enviar mensajes y conectarse a Internet. Es un dispositivo esencial en la vida cotidiana de las personas en la actualidad. El celular es cada vez más inteligente y sofisticado, con características como pantallas táctiles, cámaras de alta calidad, almacenamiento de datos y aplicaciones avanzadas. Además, hay una gran variedad de modelos y marcas disponibles, desde los más económicos hasta los más caros y de alta gama. En resumen, el celular se ha convertido en una herramienta indispensable en la comunicación y el entretenimiento de las personas.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Celular C', 'precio-1')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Celular C', 'precio-1')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Celular" data-categoria="celulares">
-            <h3>Celular Galax</h3>
-            <img src="imagenes/productos/celugalax.jpg" alt="Celular Galax">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-2">100000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p>El celular es un dispositivo electrónico portátil que se utiliza para hacer llamadas, enviar mensajes y conectarse a Internet. Es un dispositivo esencial en la vida cotidiana de las personas en la actualidad. El celular es cada vez más inteligente y sofisticado, con características como pantallas táctiles, cámaras de alta calidad, almacenamiento de datos y aplicaciones avanzadas. Además, hay una gran variedad de modelos y marcas disponibles, desde los más económicos hasta los más caros y de alta gama. En resumen, el celular se ha convertido en una herramienta indispensable en la comunicación y el entretenimiento de las personas.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Celular Galax', 'precio-2')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Celular Galax', 'precio-2')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Celular" data-categoria="celulares">
-            <h3>Celular H</h3>
-            <img src="imagenes/productos/celuh.jpg" alt="Celular H">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-3">100000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p>El celular es un dispositivo electrónico portátil que se utiliza para hacer llamadas, enviar mensajes y conectarse a Internet. Es un dispositivo esencial en la vida cotidiana de las personas en la actualidad. El celular es cada vez más inteligente y sofisticado, con características como pantallas táctiles, cámaras de alta calidad, almacenamiento de datos y aplicaciones avanzadas. Además, hay una gran variedad de modelos y marcas disponibles, desde los más económicos hasta los más caros y de alta gama. En resumen, el celular se ha convertido en una herramienta indispensable en la comunicación y el entretenimiento de las personas.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Celular H', 'precio-3')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Celular H', 'precio-3')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Celular" data-categoria="celulares">
-            <h3>Celular Verde</h3>
-            <img src="imagenes/productos/celuver.jpg" alt="Celular Verde">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-4">100000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p>El celular es un dispositivo electrónico portátil que se utiliza para hacer llamadas, enviar mensajes y conectarse a Internet. Es un dispositivo esencial en la vida cotidiana de las personas en la actualidad. El celular es cada vez más inteligente y sofisticado, con características como pantallas táctiles, cámaras de alta calidad, almacenamiento de datos y aplicaciones avanzadas. Además, hay una gran variedad de modelos y marcas disponibles, desde los más económicos hasta los más caros y de alta gama. En resumen, el celular se ha convertido en una herramienta indispensable en la comunicación y el entretenimiento de las personas.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Celular Verde', 'precio-4')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Celular Verde', 'precio-4')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Celular" data-categoria="celulares">
-            <h3>Celular X</h3>
-            <img src="imagenes/productos/celux.jpg" alt="Celular X">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-5">100000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p>El celular es un dispositivo electrónico portátil que se utiliza para hacer llamadas, enviar mensajes y conectarse a Internet. Es un dispositivo esencial en la vida cotidiana de las personas en la actualidad. El celular es cada vez más inteligente y sofisticado, con características como pantallas táctiles, cámaras de alta calidad, almacenamiento de datos y aplicaciones avanzadas. Además, hay una gran variedad de modelos y marcas disponibles, desde los más económicos hasta los más caros y de alta gama. En resumen, el celular se ha convertido en una herramienta indispensable en la comunicación y el entretenimiento de las personas.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Celular X', 'precio-5')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Celular X', 'precio-5')">Borrar del Carrito</button>
-          </div>
-
-          <!-- Lista Electro Hogar -->
-          <div class="producto" data-nombre="Tostadora" data-categoria="hogar">
-            <h3>Tostadora T</h3>
-            <img src="imagenes/productos/bread-machine-g6905a52b0_1280.jpg" alt="Tostadora T">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-6">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> La tostadora es un electrodoméstico de cocina diseñado para tostar pan u otros alimentos de forma rápida y eficiente. Está compuesta por dos ranuras para colocar el pan y una resistencia eléctrica que lo calienta para dorarlo en pocos minutos. La mayoría de las tostadoras cuentan con diferentes niveles de temperatura y tiempo para ajustarse a los gustos del usuario. Además, tienen una palanca para subir y bajar el pan y un botón para cancelar el proceso de tostado en cualquier momento. La tostadora es un elemento básico en muchas cocinas modernas y es muy fácil de usar y limpiar.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Tostadora T', 'precio-6')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Tostadora T', 'precio-6')">Borrar del Carrito</button>
-          </div>
-
-
-          <div class="producto" data-nombre="Tostadora" data-categoria="hogar" >
-            <h3>Tostadora E</h3>
-            <img src="imagenes/productos/bread-machine-g6b8cab99f_1280.jpg" alt="Tostadora E">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-7">40000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> La tostadora es un electrodoméstico de cocina diseñado para tostar pan u otros alimentos de forma rápida y eficiente. Está compuesta por dos ranuras para colocar el pan y una resistencia eléctrica que lo calienta para dorarlo en pocos minutos. La mayoría de las tostadoras cuentan con diferentes niveles de temperatura y tiempo para ajustarse a los gustos del usuario. Además, tienen una palanca para subir y bajar el pan y un botón para cancelar el proceso de tostado en cualquier momento. La tostadora es un elemento básico en muchas cocinas modernas y es muy fácil de usar y limpiar.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Tostadora E', 'precio-7')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Tostadora E', 'precio-7')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Licuadora" data-categoria="hogar">
-            <h3>Licuadora L</h3>
-            <img src="imagenes/productos/device-ga3a11c703_1280.jpg" alt="Licuadora L">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-8">20000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> La Licuadora L es un pequeño electrodoméstico de cocina utilizado para mezclar y triturar alimentos y bebidas. Es una herramienta esencial en muchas cocinas ya que permite preparar jugos, smoothies, salsas, sopas y otras recetas de forma rápida y sencilla. La Licuadora L tiene una jarra de vidrio o plástico con cuchillas de acero inoxidable que giran a alta velocidad, lo que permite triturar y mezclar alimentos en cuestión de segundos. Además, la mayoría de las Licuadoras L cuentan con varias velocidades y programas preestablecidos para adaptarse a diferentes tipos de alimentos y texturas.
-                 </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Licuadora L', 'precio-8')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Licuadora L', 'precio-8')">Borrar del Carrito</button>
-          </div>
-
-          
-          <div class="producto" data-nombre="Plancha" data-categoria="hogar">
-            <h3>Plancha P</h3>
-            <img src="imagenes/productos/electric-iron-g86393133d_1280.jpg" alt="Plancha P">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-9">10000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> La plancha P es un electrodoméstico que se utiliza para alisar y planchar ropa. Este modelo cuenta con una base de cerámica que distribuye el calor de manera uniforme y evita que la tela se queme o se pegue. Tiene un sistema de vapor que ayuda a suavizar las arrugas más difíciles y a eliminar los malos olores. La plancha P cuenta con una temperatura ajustable para adaptarse a diferentes tipos de telas, y una función de apagado automático para mayor seguridad. Además, su diseño compacto y ergonómico permite un fácil manejo y almacenamiento.
-              </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Plancha P', 'precio-9')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Plancha P', 'precio-9')">Borrar del Carrito</button>
-          </div>
-
-          
-          <div class="producto" data-nombre="Afeitadora" data-categoria="hogar">
-            <h3>Afeitadora A</h3>
-            <img src="imagenes/productos/shaver-gfd88cb802_1280.jpg" alt="Afeitadora A">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-10">15000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> La afeitadora A es un dispositivo eléctrico diseñado para cortar el vello facial y corporal. Está equipada con cuchillas afiladas que se mueven rápidamente para cortar el pelo de forma eficiente y sin causar irritación en la piel. Las afeitadoras modernas pueden funcionar tanto en seco como en mojado, y algunas incluso tienen cabezales intercambiables para cortar diferentes tipos de vello. Además, muchas afeitadoras A vienen con características adicionales como indicadores de batería, modos de velocidad ajustables y cabezales que se adaptan a los contornos del rostro. Son ideales para hombres que prefieren una solución rápida y sin dolor para el aseo personal.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Afeitadora A', 'precio-10')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Afeitadora A', 'precio-10')">Borrar del Carrito</button>
-          </div>
-
-          <!--  litsa de Electrodomesticos -->
-          <div class="producto" data-nombre="Televisor" data-categoria="electronicos">
-            <h3>Smart TV Chin</h3>
-            <img src="imagenes/productos/smarttvchin.jpg" alt="Smart TV Chin">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-11">80000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> TV 39 pulgadas de pantalla plana LCD Color de alta definición de Smart TV de plasma LED</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Smart TV Chin', 'precio-11')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Smart TV Chin', 'precio-11')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Televisor" data-categoria="electronicos">
-            <h3>Smart TV Nob</h3>
-            <img src="imagenes/productos/smarttvnob.jpeg" alt="Smart TV Nob">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-12">80000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> SMART TV NOBLEX DB58X7500 58 LED 4K</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Smart TV Nob', 'precio-12')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Smart TV Nob', 'precio-12')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Televisor" data-categoria="electronicos">
-            <h3>Smart TV Phil</h3>
-            <img src="imagenes/productos/smarttvphil.jpeg" alt="Smart TV Phil">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-13">80000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> Smart TV Philips 43 pulgadas Android TV Full HD</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Smart TV Phil', 'precio-13')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Smart TV Phil', 'precio-13')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Televisor" data-categoria="electronicos">
-            <h3>Smart TV Quan</h3>
-            <img src="imagenes/productos/smattvquan.jpeg" alt="Smart TV Quan">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-14">80000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p>Smart TV LED 50" frame 4K Ultra HD Q</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Smart TV Quan', 'precio-14')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Smart TV Quan', 'precio-14')">Borrar del Carrito</button>
-          </div>
-          
-          <div class="producto" data-nombre="Lavadora" data-categoria="electronicos">
-            <h3>Lavadora Dora</h3>
-            <img src="imagenes/productos/washing-machine-gdc01eca6e_1280.jpg" alt="Lavadora Dora">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-15">80000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> La Lavadora Dora es un electrodoméstico esencial en cualquier hogar para la limpieza de la ropa. Esta lavadora tiene una capacidad de carga de hasta 8 kilogramos de ropa y ofrece diferentes ciclos de lavado para adaptarse a las diferentes necesidades de limpieza y tejidos. Además, cuenta con una tecnología de ahorro de energía y agua, lo que permite un consumo eficiente y amigable con el medio ambiente. La Lavadora Dora es fácil de usar y su diseño moderno y elegante se adapta a cualquier estilo de decoración en el hogar.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Lavadora Dora', 'precio-15')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Lavadora Dora', 'precio-15')">Borrar del Carrito</button>
-          </div>
-
-          <!-- Lista de Notebooks -->
-
-          <div class="producto" data-nombre="Notebook" data-categoria="notebook">
-            <h3>Notebook N</h3>
-            <img src="imagenes/productos/X1502ZA-EJ294W.jpg" alt="Notebook N">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-16">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> Notebook N Vivobook I5-1240p 256 Ssd 8 Gb Win11 15.6 Fhd</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Notebook N', 'precio-16')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Notebook N', 'precio-16')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Notebook" data-categoria="notebook">
-            <h3>Notebook HD</h3>
-            <img src="imagenes/productos/notebookhd.jpg" alt="Notebook HD">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-17">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> NOTEBOOK HD V15 G2 I3 15.6" 8GB SSD256</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Notebook HD', 'precio-17')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Notebook HD', 'precio-17')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Notebook" data-categoria="notebook">
-            <h3>Notebook HP</h3>
-            <img src="imagenes/productos/notebookhp.jpg" alt="Notebook HP">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-18">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p>Notebook Inspiron 3525 15.6" Full Hd Amd Ryzen 5 5625U 2.30Ghz 8Gb 256Gb Ssd</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Notebook HP', 'precio-18')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Notebook HP', 'precio-18')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Notebook" data-categoria="notebook">
-            <h3>Notebook LN</h3>
-            <img src="imagenes/productos/notebookln.jpg" alt="Notebook LN">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-19">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p>Notebook LN 14” Core i5 8GB 256GB SSD IdeaPad 3 14ITL05</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Notebook LN', 'precio-19')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Notebook LN', 'precio-19')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Notebook" data-categoria="notebook">
-            <h3>Notebook XP</h3>
-            <img src="imagenes/productos/notebookxp.jpg" alt="Notebook XP">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-20">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p>Notebook XP IP 3 15ITL6 I7 4G 4GB 256GB 11S</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Notebook XP', 'precio-20')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Notebook XP', 'precio-20')">Borrar del Carrito</button>
-          </div>
-
-          <!-- Lista Gaming -->
-          <div class="producto" data-nombre="Gaming" data-categoria="Gaming">
-            <h3>Consola Arcade</h3>
-            <img src="imagenes/productos/consolaarcade.jpg" alt="Consola Arcade">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-21">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> Consola Portatil Mini Arcade Fichin Gtc Jpg-029 118 Juegos 8 Bit</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Consola Arcade', 'precio-21')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Consola Arcade', 'precio-21')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Gaming" data-categoria="Gaming">
-            <h3>Game B</h3>
-            <img src="imagenes/productos/gameb.jpg" alt="Game B">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-22">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> Nintendo Game Boy Advance</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Game B', 'precio-22')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Game B', 'precio-22')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Gaming" data-categoria="Gaming">
-            <h3>Nin Switch</h3>
-            <img src="imagenes/productos/ninwsitch.jpg" alt="Nin Switch">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-23">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> Nintendo Switch 32gb Standard Consola Wifi Bluetooth Hdmi.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Nin Switch', 'precio-23')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Nin Switch', 'precio-23')">Borrar del Carrito</button>
-          </div>
-
-          <div class="producto" data-nombre="Gaming" data-categoria="Gaming">
-            <h3>PS7</h3>
-            <img src="imagenes/productos/ps5digital.png" alt="PS7">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-24">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> Sony PlayStation 5 Digital 825GB Horizon Forbidden West Bundle color blanco y negro.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('PS7', 'precio-24')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('PS7', 'precio-24')">Borrar del Carrito</button>
-          </div>
-          <div class="producto" data-nombre="Gaming" data-categoria="Gaming">
-            <h3>Consola Stack</h3>
-            <img src="imagenes/productos/stack.jpg" alt="Consola Stack">
-            <p class="peso"><span><b>$</b></span></p>
-            <p class="precio" id="precio-25">50000</p>
-            <!--<p class="stock"><b>Unidades: 100</b></p>-->
-            <div class="descripcion" style="display: none;">
-              <p> Consola Valve Steam Deck 64gb Standard Color Negro Nueva.</p>
-            </div>
-            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-            <button onclick="agregarAlCarrito('Consola Stack', 'precio-25')">Agregar al carrito</button>
-            <button onclick="borrarDelCarrito('Consola Stack', 'precio-25')">Borrar del Carrito</button>
-          </div>
-
-        </div>
+        // Realizar la solicitud GET a listado.html para obtener los datos de los productos
+        fetch('https://adrian89.pythonanywhere.com/productos')
+            .then(function (response) {
+                if (response.ok) {
+                    return response.json(); // Parsear la respuesta JSON
+                } else {
+                    throw new Error('Error al obtener los productos.');
+                }
+            })
+            .then(function (data) {
+                // Iterar sobre los datos de los productos y generar el contenido dinámico
+                data.forEach(function (producto) {
+                    var productoHTML = `
+                        <div class="producto" data-nombre="Celular" data-categoria="celulares">
+                            <h3>${producto.descripcion}</h3>
+                            <img src="imagenes/productos/${producto.codigo}.jpg" alt="${producto.descripcion}">
+                            <p class="peso"><span><b>$</b></span></p>
+                            <p class="precio" id="precio-${producto.codigo}">${producto.precio}</p>
+                            <div class="descripcion" style="display: none;">
+                                <p>${producto.descripcion}</p>
+                            </div>
+                            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
+                            <button onclick="agregarAlCarrito('${producto.descripcion}', 'precio-${producto.codigo}')">Agregar al carrito</button>
+                            <button onclick="borrarDelCarrito('${producto.descripcion}', 'precio-${producto.codigo}')">Borrar del Carrito</button>
+                        </div>
+                    `;
+                    contenedorProductos.innerHTML += productoHTML; // Agregar el producto al contenedor
+                });
+            })
+            .catch(function (error) {
+                console.log('Error al obtener los productos:', error);
+            });
+    </script>
 
 
           <br>
@@ -445,9 +124,9 @@
             <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10579.027951394719!2d-57.58375742150409!3d-37.97330587169339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584d9149da44a21%3A0xe9705fdef6db1f4a!2sCarnicos%20Del%20Sur!5e0!3m2!1ses!2sar!4v1683838667995!5m2!1ses!2sar"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ; ></iframe></p></div>
             
           </div>
-     
+</main>     
         
-    </main>
+    
 
 <script>
 
