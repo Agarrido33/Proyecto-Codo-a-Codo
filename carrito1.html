@@ -46,22 +46,15 @@
       <button @click="obtenerCarrito">Mostrar carrito</button>
     </div>
 
-    <!-- Botón para realizar la compra -->
-    <div v-if="mostrarCarrito" class="contenedor-centrado">
-        <button @click="realizarCompra">Realizar compra</button>
-    </div>
-
     <div class="contenedor-centrado">
       <a href="indexinventario.html">Volver a la tienda</a>
     </div>
-    
 
 
   </div>
 
   <script>
-    //const URL = "http://127.0.0.1:5000/"
-    const URL = "https://adrian89.pythonanywhere.com/"
+    const URL = "https://adrian89.pythonanywhere.com/";
 
     const app = Vue.createApp({
       data() {
@@ -127,6 +120,7 @@
             });
         },
         obtenerCarrito() {
+
           fetch(URL + 'carrito')
             .then(response => response.json())
             .then(data => {
@@ -138,65 +132,6 @@
               alert('Error al obtener el carrito.');
             });
         },
-
-        realizarCompra() {
-          fetch(URL + 'compra', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              productos: this.carrito,
-            }),
-          })
-            .then(response => response.json())
-            .then(data => {
-              if (data.message === 'Compra realizada con éxito.') {
-                // Eliminar productos del carrito y descontar del inventario
-                for (const producto of this.carrito) {
-                  const codigo = producto.codigo;
-                  const cantidad = producto.cantidad;
-        
-                  // Eliminar producto del carrito
-                  this.eliminarProducto(codigo); // Utilizamos la función eliminarProducto existente
-        
-                  // Descuento del inventario (en el backend)
-                  fetch(`${URL}productos/${codigo}`, {
-                    method: 'PUT',
-                    headers: {
-                      'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                      descripcion: producto.descripcion,
-                      cantidad: producto.cantidad,
-                      precio: producto.precio,
-                    }),
-                  })
-                    .then(response => response.json())
-                    .then(data => {
-                      console.log(`Producto ${codigo} actualizado en el inventario.`);
-                    })
-                    .catch(error => {
-                      console.error(`Error al actualizar el producto ${codigo} en el inventario:`, error);
-                    });
-                }
-        
-                Swal.fire('Compra exitosa', data.message, 'success');
-                this.carrito = [];
-                this.mostrarCarrito = false;
-                this.obtenerProductos();
-              } else {
-                Swal.fire('Error', data.message, 'error');
-              }
-            })
-            .catch(error => {
-              console.error('Error al realizar la compra:', error);
-              alert('Error al realizar la compra.');
-            });
-        },
-
-
-
       },
     });
 
