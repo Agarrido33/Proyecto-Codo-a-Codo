@@ -10,7 +10,7 @@
 }
 
 .producto {
-    
+    float: left;
     margin: 1rem;
     padding-bottom: 1rem;
     border: 1px solid #ccc;
@@ -164,7 +164,7 @@ font-family: 'Courier New', Courier, monospace;
     box-shadow: 0 0 0.5rem rgb(83 78 76 / 50%);
 }
 
-/* Filtrado de elementos para búsqueda */
+/* Filtrado de elementos para búsqueda 
 .contenedorfiltro {
     display: table-row;
     position: fixed;
@@ -194,14 +194,12 @@ font-family: 'Courier New', Courier, monospace;
 }
 
   
-  #resultados {
-    
-    margin-left: 220px; /* Ajusta el margen izquierdo para dejar espacio para el filtro */
-    /* Agrega estilos para los resultados si es necesario */
-  }
+  
+  /* Agrega estilos para los resultados si es necesario */
+
 
   @media (max-width: 768px){
-    .contenedorfiltro {
+    /*.contenedorfiltro {
         left: auto;
         display:block;
         min-width: 95%;
@@ -233,8 +231,8 @@ font-family: 'Courier New', Courier, monospace;
         display: none;
 
  /* Ajusta el margen izquierdo para dejar espacio para el filtro */
-        /* Agrega estilos para los resultados si es necesario */
-      }
+        /* Agrega estilos para los resultados si es necesario 
+      }*/
       .producto {
     
         margin-top: 5rem;

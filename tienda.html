@@ -17,7 +17,7 @@
 
 <script defer src="Javascript/tienda.js"></script>
 <script defer src="Javascript/carrito.js"></script>
-<script defer src="Javascript/filtrotienda.js"></script>
+<!-- <script defer src="Javascript/filtrotienda.js"></script> -->
  
 </head>
 
@@ -53,9 +53,9 @@
         
     </header>
 
-    <!-- Cuerpo principal de la página, aca encontramos todo el contenido -->
+    <!-- Cuerpo principal de la página, aca encontramos todo el contenido  -->
     <main class="productos-container">
-        <div class="contenedorfiltro">
+    <!--     <div class="contenedorfiltro">
           <h3>Que estas buscando?</h3>
         
            <input type="radio" name="filtroCategoria" value="todos" id="todo" checked><label for="todo">Todos</label>
@@ -74,11 +74,11 @@
             <br>
             <input type="radio" name="filtroCategoria" value="Gaming" id="game"><label for="game">Gaming</label>
             <br>
-        </div>
+        </div>-->
         
       <div id="resultados"></div>
     
-    
+    <div class="productos-container">
       <script>
         // Obtener la referencia al contenedor de productos en la página tienda.html
         var contenedorProductos = document.getElementById('resultados');
@@ -116,6 +116,7 @@
                 console.log('Error al obtener los productos:', error);
             });
     </script>
+  </div>
 
 
           <br>
