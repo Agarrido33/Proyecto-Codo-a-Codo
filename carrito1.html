@@ -42,12 +42,9 @@
       </table>
     </div>
 
-    <div v-if="!mostrarCarrito" class="contenedor-centrado">
-      <button @click="obtenerCarrito">Mostrar carrito</button>
-    </div>
-
     <div class="contenedor-centrado">
-      <a href="indexinventario.html">Volver a la tienda</a>
+      <a href="tienda.html">Volver a la tienda</a>
+      <button @click="finalizarCompra">Finalizar compra</button>
     </div>
 
 
@@ -66,6 +63,7 @@
       },
       created() {
         this.obtenerProductos();
+        this.obtenerCarrito(); // Agregar esta línea para obtener el carrito automáticamente al cargar la página
       },
       methods: {
         obtenerProductos() {
@@ -93,6 +91,7 @@
             .then(response => response.json())
             .then(data => {
               alert(data.message);
+              location.reload(); // Recargar la página después de agregar al carrito
             })
             .catch(error => {
               console.error('Error al agregar el producto al carrito:', error);
@@ -113,6 +112,7 @@
             .then(response => response.json())
             .then(data => {
               alert(data.message);
+              location.reload(); // Recargar la página después de agregar al carrito
             })
             .catch(error => {
               console.error('Error al restar el producto del carrito:', error);
@@ -130,6 +130,31 @@
             .catch(error => {
               console.error('Error al obtener el carrito:', error);
               alert('Error al obtener el carrito.');
+            });
+        },
+        finalizarCompra() {
+          fetch(URL + 'carrito', {
+            method: 'DELETE',
+          })
+            .then(response => response.json())
+            .then(data => {
+              // Actualizar el inventario con los productos eliminados del carrito
+              for (const producto of this.carrito) {
+                const { codigo, cantidad } = producto;
+                const inventarioProducto = this.productos.find(p => p.codigo === codigo);
+                if (inventarioProducto) {
+                  inventarioProducto.cantidad += cantidad;
+                }
+              }
+        
+              // Limpiar el carrito
+              this.carrito = [];
+              
+              alert(data.message);
+            })
+            .catch(error => {
+              console.error('Error al finalizar la compra:', error);
+              alert('Error al finalizar la compra.');
             });
         },
       },
