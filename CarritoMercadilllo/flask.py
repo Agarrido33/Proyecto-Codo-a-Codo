@@ -241,12 +241,12 @@ def index():
 @app.route('/compra', methods=['POST'])
 def realizar_compra():
     productos_compra = request.json.get('productos')
-    inventario = Inventario()
+    inventario = Inventario()  # Crear una instancia de Inventario fuera del ciclo
     for producto in productos_compra:
         codigo = producto['codigo']
         cantidad = producto['cantidad']
         carrito.quitar(codigo, cantidad, inventario)
-    inventario.conexion.commit()  # Agrega esta línea para realizar el commit en la base de datos
+    inventario.conexion.commit()  # Realizar commit en la base de datos
     return jsonify({'message': 'Compra realizada con éxito.'}), 200
 # Finalmente, si estamos ejecutando este archivo, lanzamos app.
 if __name__ == '__main__':

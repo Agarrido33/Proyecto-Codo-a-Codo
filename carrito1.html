@@ -138,6 +138,7 @@
               alert('Error al obtener el carrito.');
             });
         },
+
         realizarCompra() {
           fetch(URL + 'compra', {
             method: 'POST',
@@ -145,21 +146,57 @@
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-              productos: this.carrito, // Enviamos el arreglo this.carrito dentro de un objeto con la propiedad "productos"
+              productos: this.carrito,
             }),
           })
             .then(response => response.json())
             .then(data => {
-              Swal.fire('Compra exitosa', data.message, 'success');
-              this.carrito = [];
-              this.obtenerProductos();
-              this.mostrarCarrito = false;
+              if (data.message === 'Compra realizada con éxito.') {
+                // Eliminar productos del carrito y descontar del inventario
+                for (const producto of this.carrito) {
+                  const codigo = producto.codigo;
+                  const cantidad = producto.cantidad;
+        
+                  // Eliminar producto del carrito
+                  this.eliminarProducto(codigo); // Utilizamos la función eliminarProducto existente
+        
+                  // Descuento del inventario (en el backend)
+                  fetch(`${URL}productos/${codigo}`, {
+                    method: 'PUT',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                      descripcion: producto.descripcion,
+                      cantidad: producto.cantidad,
+                      precio: producto.precio,
+                    }),
+                  })
+                    .then(response => response.json())
+                    .then(data => {
+                      console.log(`Producto ${codigo} actualizado en el inventario.`);
+                    })
+                    .catch(error => {
+                      console.error(`Error al actualizar el producto ${codigo} en el inventario:`, error);
+                    });
+                }
+        
+                Swal.fire('Compra exitosa', data.message, 'success');
+                this.carrito = [];
+                this.mostrarCarrito = false;
+                this.obtenerProductos();
+              } else {
+                Swal.fire('Error', data.message, 'error');
+              }
             })
             .catch(error => {
               console.error('Error al realizar la compra:', error);
               alert('Error al realizar la compra.');
             });
         },
+
+
+
       },
     });
 
