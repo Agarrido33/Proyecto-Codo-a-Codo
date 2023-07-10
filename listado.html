@@ -7,6 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado de Productos</title>
     <link rel="stylesheet" href="estilos/estilos.css">
+    <style>
+        tfoot tr td:first-child {
+            text-align: left;
+        }
+
+        tfoot tr td:last-child {
+            text-align: right;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,6 +32,18 @@
         </thead>
         <tbody id="tablaProductos">
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2" align="left">Total General de Cantidad:</td>
+                <td align="right" id="totalCantidad"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="left">Total General de Precio:</td>
+                <td></td>
+                <td align="right" id="totalPrecio"></td>
+            </tr>
+        </tfoot>
     </table>
 
     <div class="contenedor-centrado">
@@ -46,6 +67,8 @@
             })
             .then(function (data) {
                 var tablaProductos = document.getElementById('tablaProductos');
+                var totalCantidad = 0; // Variable para almacenar el total de cantidad
+                var totalPrecio = 0; // Variable para almacenar el total de precio
 
                 // Iteramos sobre los productos y agregamos filas a la tabla
                 data.forEach(function (producto) {
@@ -55,7 +78,19 @@
                         '<td align="right">' + producto.cantidad + '</td>' +
                         '<td align="right">&nbsp; &nbsp;&nbsp; &nbsp;' + producto.precio + '</td>';
                     tablaProductos.appendChild(fila);
+
+                    // Sumamos la cantidad y el precio de cada producto al total general
+                    totalCantidad += producto.cantidad;
+                    totalPrecio += producto.cantidad * producto.precio;
                 });
+
+                // Mostramos el total de cantidad en el elemento con id "totalCantidad"
+                var totalCantidadElemento = document.getElementById('totalCantidad');
+                totalCantidadElemento.textContent = totalCantidad;
+
+                // Mostramos el total de precio en el elemento con id "totalPrecio"
+                var totalPrecioElemento = document.getElementById('totalPrecio');
+                totalPrecioElemento.textContent = totalPrecio.toFixed(0);
             })
             .catch(function (error) {
                 // Código para manejar errores
@@ -63,4 +98,5 @@
             });
     </script>
 </body>
+
 </html>
