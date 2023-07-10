@@ -12,13 +12,10 @@
     <script src="https://unpkg.com/vue@next"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Roboto:wght@100&family=Teko:wght@500&display=swap" rel="stylesheet">
-
-<script defer src="Javascript/tienda.js"></script>
-<script defer src="Javascript/carrito.js"></script>
-<!-- <script defer src="Javascript/filtrotienda.js"></script> -->
- 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Roboto:wght@100&family=Teko:wght@500&display=swap" rel="stylesheet">
+    <script defer src="Javascript/tienda.js"></script>
+    <!-- <script defer src="Javascript/carrito.js"></script> -->
 </head>
 
 <!-- Cuerpo principal de la página -->
@@ -36,7 +33,7 @@
             </label>
         <nav class="encabezado-nav">
     
-            <ul>
+            <ul id="menu-items">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="tienda.html">Tienda</a></li>
                 <li><a href="contact.html">Contacto y FAQ</a></li>
@@ -44,111 +41,149 @@
             </ul>
 
         </nav>
-        <div class="compras"><h2><div id="iconcarrito"> <i class="fas fa-shopping-cart"></i></div></h2>
-        <h2><div id="total-carrito"> </div></h2>
-        <p><button id="fincompra" onclick="finalizarCompra()">Finalizar compra</button></p>
-        </div>
-        
-        
-        
     </header>
 
     <!-- Cuerpo principal de la página, aca encontramos todo el contenido  -->
     <main class="productos-container">
-    <!--     <div class="contenedorfiltro">
-          <h3>Que estas buscando?</h3>
-        
-           <input type="radio" name="filtroCategoria" value="todos" id="todo" checked><label for="todo">Todos</label>
-          <br>
-          
-            <input type="radio" name="filtroCategoria" value="celulares" id="cel"><label for="cel">Smartphones</label>
-            <br>
-          
-            <input type="radio" name="filtroCategoria" value="hogar" id="miniele"><label for="miniele">Pequeños Electros</label>
-            <br>
-          
-            <input type="radio" name="filtroCategoria" value="electronicos" id="elec"><label for="elec">Electrodomésticos</label>
-            <br>
+        <div id="app">
+            <div id="resultados">
+              <div class="compras">
+                <h2><div id="iconcarrito"><i class="fas fa-shopping-cart"></i></div></h2>
+                <h2><div id="totalCarrito">Total:$ {{ totalCarrito }}</div></h2>
+                <p><button id="fincompra"><a href="carrito1.html">Finalizar compra</a></button></p>
+            </div>
+                <!-- Iteración de productos -->
+                <div v-for="producto in productos" :key="producto.codigo" class="producto" :data-nombre="producto.descripcion" :data-categoria="producto.categoria">
+                    <h3>{{ producto.descripcion }}</h3>
+                    <img :src="'imagenes/productos/' + producto.codigo + '.jpg'" :alt="producto.descripcion">
+                    <p class="peso"><span><b>$</b></span></p>
+                    <p class="precio" :id="'precio-' + producto.codigo">{{ producto.precio }}</p>
+                    <div class="descripcion" style="display: none;">
+                        <p>{{ producto.descripcion }}</p>
+                    </div>
+                    <button @click="agregarAlCarrito(producto)"><b>Agregar al Carrito</b></button><br>
+                    <button @click="restarDelCarrito(producto)"><b>Sacar del Carrito</b></button>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
 
-            <input type="radio" name="filtroCategoria" value="notebook" id="note"><label for="note">Notebooks</label>
-            <br>
-            <input type="radio" name="filtroCategoria" value="Gaming" id="game"><label for="game">Gaming</label>
-            <br>
-        </div>-->
-        
-      <div id="resultados"></div>
-    
-    <div class="productos-container">
-      <script>
-        // Obtener la referencia al contenedor de productos en la página tienda.html
-        var contenedorProductos = document.getElementById('resultados');
-
-        // Realizar la solicitud GET a listado.html para obtener los datos de los productos
-        fetch('https://adrian89.pythonanywhere.com/productos')
-            .then(function (response) {
-                if (response.ok) {
-                    return response.json(); // Parsear la respuesta JSON
-                } else {
-                    throw new Error('Error al obtener los productos.');
-                }
-            })
-            .then(function (data) {
-                // Iterar sobre los datos de los productos y generar el contenido dinámico
-                data.forEach(function (producto) {
-                    var productoHTML = `
-                        <div class="producto" data-nombre="Celular" data-categoria="celulares">
-                            <h3>${producto.descripcion}</h3>
-                            <img src="imagenes/productos/${producto.codigo}.jpg" alt="${producto.descripcion}">
-                            <p class="peso"><span><b>$</b></span></p>
-                            <p class="precio" id="precio-${producto.codigo}">${producto.precio}</p>
-                            <div class="descripcion" style="display: none;">
-                                <p>${producto.descripcion}</p>
-                            </div>
-                            <button onclick="mostrarDescripcion(this)">Mostrar Descripción</button>
-                            <button onclick="agregarAlCarrito('${producto.descripcion}', 'precio-${producto.codigo}')">Agregar al carrito</button>
-                            <button onclick="borrarDelCarrito('${producto.descripcion}', 'precio-${producto.codigo}')">Borrar del Carrito</button>
-                        </div>
-                    `;
-                    contenedorProductos.innerHTML += productoHTML; // Agregar el producto al contenedor
-                });
-            })
-            .catch(function (error) {
-                console.log('Error al obtener los productos:', error);
-            });
-    </script>
-  </div>
-
-
-          <br>
-          <div class="ubicacion">
-            <h3>Visitanos en Avenida Siempre Viva 1234 - Springfield</h3>
-            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10579.027951394719!2d-57.58375742150409!3d-37.97330587169339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584d9149da44a21%3A0xe9705fdef6db1f4a!2sCarnicos%20Del%20Sur!5e0!3m2!1ses!2sar!4v1683838667995!5m2!1ses!2sar"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ; ></iframe></p></div>
-            
-          </div>
-</main>     
-        
-    
-
-<script>
-
-
-</script>
-		
-    <footer> 
-      <div>
-        <a href="https://es-la.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="imagenes/faceicon.png" alt=""></a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src="imagenes/twiticon.png" alt=""></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="imagenes/instaicon.png" alt=""></a>
-        <a href="http://github.com" target="_blank" rel="noopener noreferrer"><img src="imagenes/giticon.png" alt=""></a>
-        
-      
-    
-        <br><h3>© Copyright 2023, El Mercadillo!. Todos los derechos reservados.</h3>
+    <div class="ubicacion">
+        <h3>Visitanos en Avenida Siempre Viva 1234 - Springfield</h3>
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10579.027951394719!2d-57.58375742150409!3d-37.97330587169339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584d9149da44a21%3A0xe9705fdef6db1f4a!2sCarnicos%20Del%20Sur!5e0!3m2!1ses!2sar!4v1683838667995!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
     </div>
-      
-        
 
+    <footer> 
+        <div>
+            <a href="https://es-la.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="imagenes/faceicon.png" alt=""></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><img src="imagenes/twiticon.png" alt=""></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="imagenes/instaicon.png" alt=""></a>
+            <a href="http://github.com" target="_blank" rel="noopener noreferrer"><img src="imagenes/giticon.png" alt=""></a>
+            <br><h3>© 2023 El Mercadillo!. Todos los derechos reservados.</h3>
+        </div>
     </footer>
+    <script>
+      const URL = "https://adrian89.pythonanywhere.com/";
+
+      const app = Vue.createApp({
+          data() {
+              return {
+                  productos: [],
+                  carrito: [],
+                  totalCarrito: 0,
+              };
+          },
+          created() {
+              this.obtenerProductos();
+              this.obtenerCarrito();
+          },
+          methods: {
+              obtenerProductos() {
+                  fetch(URL + 'productos')
+                      .then(response => response.json())
+                      .then(data => {
+                          this.productos = data;
+                      })
+                      .catch(error => {
+                          console.error(URL + 'productos', error);
+                          alert('Error al obtener los productos.');
+                      });
+              },
+              agregarAlCarrito(producto) {
+                  fetch(URL + 'carrito', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                          codigo: producto.codigo,
+                          cantidad: 1,
+                      }),
+                  })
+                      .then(response => response.json())
+                      .then(data => {
+                          alert(data.message);
+                          this.obtenerCarrito();
+                          this.calcularTotalCarrito();
+                      })
+                      .catch(error => {
+                          console.error('Error al agregar el producto al carrito:', error);
+                          alert('Error al agregar el producto al carrito.');
+                      });
+              },
+              restarDelCarrito(producto) {
+                  fetch(URL + 'carrito', {
+                      method: 'DELETE',
+                      headers: {
+                          'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                          codigo: producto.codigo,
+                          cantidad: 1,
+                      }),
+                  })
+                      .then(response => response.json())
+                      .then(data => {
+                          alert(data.message);
+                          this.obtenerCarrito();
+                          this.calcularTotalCarrito();
+                      })
+                      .catch(error => {
+                          console.error('Error al restar el producto del carrito:', error);
+                          alert('Error al restar el producto del carrito.');
+                      });
+              },
+              mostrarDescripcion(producto) {
+                  const descripcionElement = document.querySelector(`.producto[data-nombre="${producto.descripcion}"] .descripcion`);
+                  if (descripcionElement) {
+                      descripcionElement.style.display = 'block';
+                  }
+              },
+              obtenerCarrito() {
+                  fetch(URL + 'carrito')
+                      .then(response => response.json())
+                      .then(data => {
+                          this.carrito = data;
+                          this.calcularTotalCarrito();
+                      })
+                      /*.catch(error => {
+                          console.error('Error al obtener el carrito:', error);
+                          alert('Error al obtener el carrito.')
+                      });*/
+              },
+              calcularTotalCarrito() {
+                  this.totalCarrito = this.carrito.reduce((total, producto) => {
+                      const precio = parseFloat(document.getElementById(`precio-${producto.codigo}`).textContent);
+                      return total + (precio * producto.cantidad);
+                  }, 0);
+              },
+          },
+      });
+
+      app.mount('#app');
+  </script>
 
 </body>
 </html>
+

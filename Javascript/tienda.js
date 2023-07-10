@@ -1,4 +1,4 @@
-/* Función para mostrar/ocultar descripciones
+// Función para mostrar/ocultar descripciones
 function mostrarDescripcion(boton) {
   var descripcion = boton.previousElementSibling;
   if (descripcion.style.display === 'none') {
@@ -30,5 +30,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
 });
-*/
+
 

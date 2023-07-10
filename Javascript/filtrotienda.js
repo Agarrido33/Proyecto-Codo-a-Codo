@@ -1,4 +1,4 @@
-// Obtener el input de filtro de categoría
+/*// Obtener el input de filtro de categoría
 const filtroCategoria = document.getElementsByName('filtroCategoria');
 
 // Escuchar los eventos de cambio en el filtro de categoría
@@ -32,4 +32,4 @@ function filtrar() {
     }
   }
 }
-
+*/

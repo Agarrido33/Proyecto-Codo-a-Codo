@@ -1,4 +1,4 @@
-let totalCarrito = 0;
+/*let totalCarrito = 0;
 
 const productosEnCarrito = [];
 
@@ -37,4 +37,4 @@ function finalizarCompra() {
   } else {
     alert("El carrito está vacío");
   }
-}
+}*/
