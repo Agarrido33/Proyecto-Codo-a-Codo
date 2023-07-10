@@ -26,18 +26,18 @@ p {
 h1, h2, h3, h4, h5, h6 {
 
     text-align: center;
-    color: rgb(217, 224, 238);
+    color: white;
     text-shadow: 0 0 0.2em rgb(37, 39, 39), 0 0 0.2em rgb(225, 236, 241),
     0 0 0.2em rgb(239, 232, 241);
   }
-}
+
 
 form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     background-color: white;
-    border: 1px solid lightslategray;
+    border: 3px solid lightslategray;
     border-radius: 5px;
 }
 
@@ -95,9 +95,9 @@ button:hover {
 a {
     padding: 8px;
     margin:4px;
-    background-color: #fdab13;
+    background-color: #732283;
     color: #ffffff;
-    border: none;
+    border: 1px rgb(49, 35, 49) solid;
     border-radius: 5px;
     cursor: pointer;
     text-decoration: none;
@@ -105,7 +105,7 @@ a {
 }
 
 a:hover {
-    background-color: #cd7b00;
+    background-color: #932aa8;
 }
 
 #imagenlogo img{

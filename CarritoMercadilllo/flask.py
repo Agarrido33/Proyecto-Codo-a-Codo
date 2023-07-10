@@ -237,6 +237,17 @@ def obtener_carrito():
 def index():
     return 'API de Inventario'
 
+# Ruta para realizar la compra
+@app.route('/compra', methods=['POST'])
+def realizar_compra():
+    productos_compra = request.json.get('productos')
+    inventario = Inventario()
+    for producto in productos_compra:
+        codigo = producto['codigo']
+        cantidad = producto['cantidad']
+        carrito.quitar(codigo, cantidad, inventario)
+    inventario.conexion.commit()  # Agrega esta línea para realizar el commit en la base de datos
+    return jsonify({'message': 'Compra realizada con éxito.'}), 200
 # Finalmente, si estamos ejecutando este archivo, lanzamos app.
 if __name__ == '__main__':
     app.run()
