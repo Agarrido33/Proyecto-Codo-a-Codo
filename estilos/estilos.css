@@ -81,15 +81,15 @@ input[type="submit"]:hover {
 button {
     padding: 8px;
     margin:4px;
-    background-color: #007bff;
+    background-color: #732283;
     color: #ffffff;
-    border: none;
+    border: 1px rgb(49, 35, 49) solid;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #932aa8;
 }
 
 a {

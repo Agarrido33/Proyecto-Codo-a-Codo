@@ -18,7 +18,7 @@
     text-align: center;
     width: 200px;
     max-height: 350px;
-    overflow: auto;
+    overflow: hidden;
   }
 
 .producto h3 {
@@ -153,13 +153,13 @@ font-family: 'Courier New', Courier, monospace;
 }
 .ubicacion h3 {
     background: linear-gradient(rgb(116, 13, 148), rgb(160, 42, 175), rgb(255, 255, 255));
-    border-radius: 50px 50px 0 0;
+    border-radius: 5px;
     font-size: 25px;
     width: auto;
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0;
     color: rgb(255, 255, 255);
     text-shadow: 0 0 0.2em rgb(133, 212, 238), 0 0 0.2em rgb(119, 205, 255),
 		0 0 0.2em rgb(116, 13, 148);
