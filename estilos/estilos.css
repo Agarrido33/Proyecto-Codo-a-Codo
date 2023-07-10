@@ -1,26 +1,35 @@
 /* Estilos para todo el proyecto */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Dongle', sans-serif;
+    background: linear-gradient(rgb(60, 4, 77), rgb(160, 42, 175), rgba(255, 255, 255, 0.849));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
 }
 
 .contenedor-centrado {
     display:flex;
     width: 100%;
+    
     justify-content: center;
 }
 
 p {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #f9f9f9;
+    
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
+
     text-align: center;
-    color: #007bff;
+    color: rgb(217, 224, 238);
+    text-shadow: 0 0 0.2em rgb(37, 39, 39), 0 0 0.2em rgb(225, 236, 241),
+    0 0 0.2em rgb(239, 232, 241);
+  }
 }
 
 form {
@@ -97,4 +106,10 @@ a {
 
 a:hover {
     background-color: #cd7b00;
+}
+
+#imagenlogo img{
+    display: block;
+    width: 35rem;
+    margin: auto;
 }
