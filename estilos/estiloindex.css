@@ -11,7 +11,7 @@
     display: flex;
     padding: 0;
     width: 300%;
-    animation: slide 15s infinite alternate ease-in-out;
+    animation: slide 7s infinite alternate ease-in-out;
   }
   
   .slider-frame li {
